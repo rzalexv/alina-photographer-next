@@ -9,11 +9,15 @@ import Folio1 from "@/public/img/portfolio/1.png";
 import Folio2 from "@/public/img/portfolio/2.png";
 import Folio3 from "@/public/img/portfolio/3.png";
 import Folio4 from "@/public/img/portfolio/4.png";
+import Head from "next/head";
 
 const PortfolioPage = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
   return (
     <>
+      <Head>
+        <title>Alina Photographer | Portfolio</title>
+      </Head>
       <motion.section className="section" initial={{ opacity: 0, y: "100%" }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: "100%" }} transition={transition1}>
         <div className="container relative mx-auto">
           <div className="flex flex-col items-center justify-start h-full gap-8 pt-24 pb-8 text-center lg:flex-row gap-x-24 lg:text-left lg:pt-36 md:justify-center">

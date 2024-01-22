@@ -3,6 +3,7 @@ import { Footer, Header } from ".";
 import { Mulish, Playfair_Display } from "next/font/google";
 import { CursorContext } from "@/context/CursorContext";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 export const mulish = Mulish({
   subsets: ["latin"],
@@ -21,6 +22,11 @@ export const Layout: FC<Props> = ({ children }) => {
 
   return (
     <>
+      <Head>
+        <title>Alina Photographer</title>
+        <meta name="description" content="Alina Photographer Portfolio" />
+      </Head>
+
       <div className={`${mulish.variable} ${playfair.variable}`}>
         <Header />
         <main className="pt-24 lg:pt-36">{children}</main>

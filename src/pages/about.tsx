@@ -6,12 +6,16 @@ import { CursorContext } from "@/context/CursorContext";
 import { Contact } from "@/components";
 import { transition1 } from "@/utils";
 import WomanAbout from "@/public/img/about/woman.png";
+import Head from "next/head";
 
 const AboutPage = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
 
   return (
     <>
+      <Head>
+        <title>Alina Photographer | About</title>
+      </Head>
       <motion.section className="section" initial={{ opacity: 0, y: "100%" }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: "100%" }} transition={transition1}>
         <div className="container relative px-4 mx-auto md:px-8">
           <div className="flex flex-col items-center justify-center h-full text-center lg:flex-row gap-x-24 lg:text-left lg:pt-16" onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
